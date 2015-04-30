@@ -18,7 +18,6 @@ namespace Chrome4Net.NativeMessaging
         public AsyncCallback callback { get; private set; }
         public object state { get; private set; }
         public ManualResetEvent wait { get; private set; }
-        public int waitTimeout;
 
         public bool lengthIsCompleted;
         public bool lengthCompletedSynchronously;
@@ -38,7 +37,6 @@ namespace Chrome4Net.NativeMessaging
             this.callback = callback;
             this.state = state;
             wait = new ManualResetEvent(false);
-            waitTimeout = System.Threading.Timeout.Infinite;
 
             lengthIsCompleted = false;
             lengthCompletedSynchronously = false;
