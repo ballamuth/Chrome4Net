@@ -78,6 +78,7 @@ namespace Chrome4Net.NativeMessaging
             {
                 ar.lengthException = ex;
                 ar.wait.Set();
+                if (ar.callback != null) ar.callback(ar);
             }
         }
 
@@ -109,6 +110,7 @@ namespace Chrome4Net.NativeMessaging
             {
                 ar.lengthException = ex;
                 ar.wait.Set();
+                if (ar.callback != null) ar.callback(ar);
             }
         }
 
@@ -185,6 +187,7 @@ namespace Chrome4Net.NativeMessaging
             {
                 ar.lengthException = ex;
                 ar.wait.Set();
+                if (ar.callback != null) ar.callback(ar);
             }
         }
 
@@ -197,11 +200,13 @@ namespace Chrome4Net.NativeMessaging
                 ar.messageCompletedSynchronously = messageAsyncResult.CompletedSynchronously;
                 ostream.EndWrite(messageAsyncResult);
                 ar.wait.Set();
+                if (ar.callback != null) ar.callback(ar);
             }
             catch (Exception ex)
             {
                 ar.messageException = ex;
                 ar.wait.Set();
+                if (ar.callback != null) ar.callback(ar);
             }
         }
 
