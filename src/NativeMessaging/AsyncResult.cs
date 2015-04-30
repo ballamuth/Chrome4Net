@@ -7,6 +7,9 @@ using System.Threading;
 
 namespace Chrome4Net.NativeMessaging
 {
+    /// <summary>
+    /// This class is an implementation of IAsyncResult interface specific to Chrome4Net.NativeMessaging.Port class.
+    /// </summary>
     class AsyncResult : IAsyncResult
     {
         public object AsyncState { get { return state; } }
