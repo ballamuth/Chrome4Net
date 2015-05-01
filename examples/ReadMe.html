@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+
+<body>
+  <h1>Google Chrome Native Messaging Extension Examples</h1>
+
+  <h2>Echo Extension</h2>
+
+  <h3>Synopsis</h3>
+  <p>This extension receives messages sent from the page and sends them back.
+
+  <h3>Installation</h3>
+  <ol>
+    <li>Download the example and build it.
+    <li>Run Echo.exe with command <em>register</em>. This will generate native messaging host manifest and put a reference to it into the system registry.
+    <li>Start Google Chrome and open there the extensions page : <a href="chrome://extensions/">chrome://extensions</a>
+    <li>Turn on the <em>Developer mode</em>, press <em>Load unpacked extension</em> button, navigate to the folder containing the extension
+      (<a href="Echo/bin/Debug/extension/">Echo/bin/Debug/extension</a> or <a href="Echo/bin/Release/extension/">Echo/bin/Release/extension</a> depending
+      on the solution configuration) and install the extension.
+    <li>Open test.html in the browser (<a href="Echo/bin/Debug/test.html" target="_blank">Echo/bin/Debug/extension/test.html</a> or 
+      <a href="Echo/bin/Release/test.html" target="_blank">Echo/bin/Release/test.html</a> depending on the solution configuration again).
+    <li>Leave <em>JSON Request</em> text area as it is and press <em>Send request</em> button in the test page. 
+      The page will make a proper request for you : fill source and destination properties of the request.
+    <li>The reply should appear, containing source and destination properies swapped and the original request in the request property.
+  </ol>
+
+</body>
+
+</html>
