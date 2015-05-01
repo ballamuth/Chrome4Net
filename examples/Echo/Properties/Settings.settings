@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Echo.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ExtensionId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">halmbimoannfadoedalghfeihhjblaaj</Value>
+    </Setting>
+    <Setting Name="ExtensionKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0RGsdeT8tzSW9WOT6L5YP6lgHp3jUZbPI4CoyL8KraNBnKFkufBc4jz1SFbDcFynMQPijvnO785eDzHfKReIRQiFCOF7J5WeLjFzCbVnX0cPTiocnOGVc5EWUzCq8rxiOuprZwPS4LZaUWwjPnnW3ssx2TLm6jk3554P6l0bf9HUGMS9z7v4FCIKa+o0x5aeyfJHV+WRWR5eOMzYjQxdHki4JkIEoAjwLfFqUiA3yBy6L7//UO5KDO4i/fx9dgTZbWOhArCTgSiajsXIfXJ3kq20HEBpkROkmIRUOVoM0dp4wbgh8EMrQ/nTYAwNWSkGRKvr6lwuyS45onjxuMPWQwIDAQAB</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
