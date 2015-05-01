@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 using System.Diagnostics;
@@ -16,6 +14,7 @@ namespace Chrome4Net.NativeMessaging
     /// Partial implementation means that parsing input messages into JSON objects and JSON object into output messages
     /// is up to you.
     /// </remarks>
+    /// <seealso cref="Newtonsoft.Json"/>
     public class Port
     {
         /// <summary>
