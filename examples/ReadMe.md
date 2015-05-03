@@ -4,7 +4,7 @@
 
 ###Synopsis
 
-This extensions receive messages sent from the page and send them back to the page.
+These extensions receive messages sent from the page and send them back to the page.
 
 The difference is that the Echo extension runs in a single process, while Relayed Echo extension starts one process to interface with Google Chrome
 and the second process to process native messages. This two-step messages processing mechanism appears the only solution if you use some
