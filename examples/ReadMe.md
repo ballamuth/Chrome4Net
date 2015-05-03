@@ -1,10 +1,14 @@
 #Google Chrome Native Messaging Extension Examples
 
-##Echo Extension
+##Echo Extension and Relayed Echo Extension
 
 ###Synopsis
 
-This extension receives messages sent from the page and sends them back.
+This extensions receive messages sent from the page and sends them back to the page.
+
+The difference is that the Echo extension runs in a single process, while Relayed Echo extension starts one process to interface with Google Chrome
+and the second process to process native messages. This two-step messages processing mechanism appears the only solution if you use some
+third-party libraries that dare to write their own messages to standard error or, which is worse, to standard output.
 
 ###Installation
 * Download the example and build it.
@@ -16,3 +20,5 @@ This extension receives messages sent from the page and sends them back.
 * Leave *JSON Request* text area as it is and press *Send request* button in the test page. 
   The page will make a proper request for you : fill source and destination properties of the request.
 * The reply should appear, containing source and destination properies swapped and the original request in the request property.
+
+Konstantin Kuzvesov, 2015
