@@ -1,0 +1,25 @@
+﻿{
+	"manifest_version": 2,
+	"name": "Chrome4Net.Relayed.Echo",
+	"version": "0.1.0",
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9tyrsYPAy3TSnF15kETYe/5j/ghfkqTH+MHaX06waG1w2ho/LAvurqfgH2uWN2W/u4izUHWKMF6PHl3yhcIAuDerINbgBZ5nBKEtgl5byG9+Mc5mBDK50gai53cdhXW9A4WKn3mIY5AhSafztWXoS7qEqrDjhVGkuuaCYkRPXsZNUVyyrxdniIKARc6kLXGK8ztKQOU3NOlJv4CjrZ2rboTlGj2HhFgsjG3Q7JuQJ+X5H82048HUM0dRiB32g8fXpYngIaE+W9hU/TGt8TyzQ9jg1TZ+5U7YZRrBeNMWFG3/YG5XODuZ1hnScYN5ARglcnf5Y7oq89OpXX0gqhZ3IwIDAQAB",
+	"description": "An example extension",
+	"icons": {
+		"48": "icons/echo-48x48.png",
+		"32": "icons/echo-32x32.png",
+		"24": "icons/echo-24x24.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*", "file://*/*" ],
+			"js": [ "scripts/content.js" ]
+		}
+	],
+	"background": {
+		"scripts": [ "scripts/background.js" ],
+		"persistent": false
+	},
+	"permissions": [
+		"nativeMessaging"
+	]
+}

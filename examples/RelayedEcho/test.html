@@ -1,0 +1,46 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+
+		window.addEventListener( 'message', function(event) {
+			if (event.source != window) return;
+			var message = event.data;
+			console.log("new message");
+			console.log(message);
+			
+			if (message.source && (message.source == ('chrome-extension://kndkemaambgolcpdpfllbhmllkdfkfno/'))) {
+				document.getElementById('reply').value = JSON.stringify( message, null, 4 );
+			}
+		}, false );
+
+		function SendRequest() {
+			var request;
+			try {
+				request = JSON.parse( document.getElementById('request').value );
+			}
+			catch (e) {
+				return alert( "Request parse error: " + e );
+			}
+			SendMessage( request );
+		}
+
+		function SendMessage(message) {
+			message.source = window.location.href;
+			message.destination = "chrome-extension://kndkemaambgolcpdpfllbhmllkdfkfno/";
+			document.getElementById('request').value = JSON.stringify( message, null, 4 );
+			window.postMessage(message,"*");
+		}
+
+	</script>
+</head>
+
+<body>
+	<div>JSON Request</div>
+	<div><textarea id="request" rows="15" cols="120">{}</textarea></div>
+	<div><button onclick="javascript:SendRequest();">Send request</button></div>
+	<div>JSON Reply</div>
+	<div><textarea id="reply" rows="15" cols="120"></textarea></div>
+</body>
+
+</html>

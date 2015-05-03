@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Echo", "Echo\Echo.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chrome4Net.Net35", "..\src\Chrome4Net.Net35.csproj", "{D8CFA0A3-1F44-4989-8284-4983B1008E50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelayedEcho", "RelayedEcho\RelayedEcho.csproj", "{F4807B01-CD32-4454-B075-000709E26043}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{D8CFA0A3-1F44-4989-8284-4983B1008E50}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D8CFA0A3-1F44-4989-8284-4983B1008E50}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D8CFA0A3-1F44-4989-8284-4983B1008E50}.Release|x86.ActiveCfg = Release|Any CPU
+		{F4807B01-CD32-4454-B075-000709E26043}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Debug|x86.ActiveCfg = Debug|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Debug|x86.Build.0 = Debug|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Release|Any CPU.ActiveCfg = Release|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Release|x86.ActiveCfg = Release|x86
+		{F4807B01-CD32-4454-B075-000709E26043}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
