@@ -59,7 +59,9 @@
     <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="extension\keys\extension.id" />
     <None Include="extension\keys\extension.key" />
     <None Include="extension\manifest.json">
@@ -88,6 +90,7 @@
     </Content>
     <Content Include="test.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>

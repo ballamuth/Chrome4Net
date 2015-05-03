@@ -49,6 +49,7 @@ namespace Echo
                     if (request["source"] != null) reply["source"] = request["destination"];
                     if (request["destination"] != null) reply["destination"] = request["source"];
                     reply["request"] = request;
+                    reply["extension"] = "Chrome4Net.Echo";
                     message = reply.ToString(Formatting.None);
                     log.DebugFormat("reply message\n{0}", message);
                     port.Write(message);

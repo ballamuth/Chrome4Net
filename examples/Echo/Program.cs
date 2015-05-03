@@ -26,10 +26,10 @@ namespace Echo
             log.DebugFormat("command line : \"{0}\"", string.Join("\", \"", args));
 
             // started with no arguments?
-            if (args.Length == 0) return Usage();
+            if (args.Length == 0) Usage();
 
             // started by chrome?
-            if (args[args.Length - 1].StartsWith("chrome-extension://")) RunNativeMessagingHost(args);
+            else if (args[args.Length - 1].StartsWith("chrome-extension://")) RunNativeMessagingHost(args);
 
             // register command?
             else if (args[args.Length - 1] == "register") RegisterNativeMessagingHost(args);
