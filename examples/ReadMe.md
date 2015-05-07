@@ -37,6 +37,8 @@ This extension interfaces with TWAIN drivers using requests sent from the page.
 * Leave *JSON Request* text area as it is and press *Send request* button in the test page. 
   The page will make a proper request for you : fill source and destination properties of the request.
 * The reply should appear, containing source and destination properies swapped, the original request, exception and comment texts, and ok flag set to false.
+
+###Testing
 * Send sequentially get version and list actions requests by pressing corresponding buttons. 
 * Then try to acquire sample image and transfer it to the page. The image with text 'sample' should appear.
 * Then try to initialize twain interface, list twain sources, select twain sourcse, scan the image by pressing acquire image 
