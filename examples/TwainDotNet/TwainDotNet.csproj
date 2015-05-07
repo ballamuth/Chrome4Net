@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{857B8891-2932-484D-A9A8-D38B47108CF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwainDotNet</RootNamespace>
+    <AssemblyName>TwainDotNet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>TwainDotNet.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Debug\TwainDotNet.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Release\TwainDotNet.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net35-client\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Capability.cs" />
+    <Compile Include="CapabilityResult.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="DataSourceManager.cs" />
+    <Compile Include="Diagnostics.cs" />
+    <Compile Include="FeederEmptyException.cs" />
+    <Compile Include="IWindowsMessageHook.cs" />
+    <Compile Include="ScanningCompleteEventArgs.cs" />
+    <Compile Include="PageSettings.cs" />
+    <Compile Include="ResolutionSettings.cs" />
+    <Compile Include="AreaSettings.cs" />
+    <Compile Include="RotationSettings.cs" />
+    <Compile Include="ScanSettings.cs" />
+    <Compile Include="TransferImageEventArgs.cs" />
+    <Compile Include="TwainException.cs" />
+    <Compile Include="TwainNative\AutoSize.cs" />
+    <Compile Include="TwainNative\CapabilityArrayValue.cs" />
+    <Compile Include="TwainNative\CapabilityEnumValue.cs" />
+    <Compile Include="TwainNative\CapabilityOneValue.cs" />
+    <Compile Include="TwainNative\Command.cs" />
+    <Compile Include="TwainNative\Compression.cs" />
+    <Compile Include="TwainNative\ConditionCode.cs" />
+    <Compile Include="TwainNative\Country.cs" />
+    <Compile Include="TwainNative\Duplex.cs" />
+    <Compile Include="TwainNative\Fix32.cs" />
+    <Compile Include="TwainNative\FlipRotation.cs" />
+    <Compile Include="TwainNative\Frame.cs" />
+    <Compile Include="TwainNative\ImageFileFormat.cs" />
+    <Compile Include="TwainNative\ImageLayout.cs" />
+    <Compile Include="TwainNative\Orientation.cs" />
+    <Compile Include="TwainNative\PageType.cs" />
+    <Compile Include="TwainNative\PixelType.cs" />
+    <Compile Include="TwainNative\TransferMechanism.cs" />
+    <Compile Include="TwainNative\TwainCapability.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TwainNative\Units.cs" />
+    <Compile Include="Win32\BitmapInfoHeader.cs" />
+    <Compile Include="Win32\BitmapRenderer.cs" />
+    <Compile Include="Win32\Gdi32Native.cs" />
+    <Compile Include="Win32\Kernel32Native.cs" />
+    <Compile Include="TwainNative\Language.cs" />
+    <Compile Include="TwainNative\Twain32Native.cs" />
+    <Compile Include="TwainNative\Identity.cs" />
+    <Compile Include="TwainNative\TwainConstants.cs" />
+    <Compile Include="TwainNative\TwainResult.cs" />
+    <Compile Include="TwainNative\TwainVersion.cs" />
+    <Compile Include="TwainNative\Capabilities.cs" />
+    <Compile Include="TwainNative\DataArgumentType.cs" />
+    <Compile Include="TwainNative\DataGroup.cs" />
+    <Compile Include="TwainNative\Event.cs" />
+    <Compile Include="TwainNative\ImageInfo.cs" />
+    <Compile Include="TwainNative\Message.cs" />
+    <Compile Include="TwainNative\ContainerType.cs" />
+    <Compile Include="TwainNative\PendingXfers.cs" />
+    <Compile Include="TwainNative\Status.cs" />
+    <Compile Include="TwainNative\TwainType.cs" />
+    <Compile Include="Win32\User32Native.cs" />
+    <Compile Include="TwainNative\UserInterface.cs" />
+    <Compile Include="Win32\WindowsMessage.cs" />
+    <Compile Include="Twain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="TwainDotNet.nuspec" />
+    <None Include="TwainDotNet.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

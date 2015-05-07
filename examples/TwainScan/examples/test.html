@@ -1,0 +1,74 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+
+		window.addEventListener( 'message', function(event) {
+			if (event.source != window) return;
+			var message = event.data;
+			console.log("new message");
+			console.log(message);
+			
+			if (message.source && (message.source == ('chrome-extension://amjfkhhbfhdhjlgfhjkhhjncfapcacmd/'))) {
+				document.getElementById('reply').value = JSON.stringify( message, null, 4 );
+				if (message.image) {
+					if (message.image.data) {
+						document.getElementById('image').src = 'data:'+message.image.type+';base64,'+message.image.data;
+					}
+				}
+			}
+		}, false );
+
+		function SendRequest() {
+			var request;
+			try {
+				request = JSON.parse( document.getElementById('request').value );
+			}
+			catch (e) {
+				return alert( "Request parse error: " + e );
+			}
+			SendMessage( request );
+		}
+
+		function SendMessage(message) {
+			if (typeof message.source === 'undefined') message.source = window.location.href;
+			if (typeof message.destination === 'undefined') message.destination = "chrome-extension://amjfkhhbfhdhjlgfhjkhhjncfapcacmd/";
+			document.getElementById('request').value = JSON.stringify( message, null, 4 );
+			window.postMessage(message,"*");
+		}
+
+		function GetVersion() { return SendMessage({"action":"get_version"}); }
+		function ListActions() { return SendMessage({"action":"list_actions"}); }
+		function AcquireSample() { return SendMessage({"action":"acquire_sample"}); }
+		function TransferImage() { return SendMessage({"action":"transfer_image"}); }
+		function InitTwain() { return SendMessage({"action":"init_twain"}); }
+		function ListSources() { return SendMessage({"action":"list_sources"}); }
+		function SelectSource() { return SendMessage({"action":"select_source"}); }
+		function AcquireImage() { return SendMessage({"action":"acquire_image"}); }
+
+	</script>
+</head>
+
+<body>
+	<div>JSON Request</div>
+	<div><textarea id="request" rows="15" cols="120">{}</textarea></div>
+	<div><button onclick="javascript:SendRequest();">Send request</button></div>
+	<div>
+		<button onclick="javascript:GetVersion();">Get version</button>
+		<button onclick="javascript:ListActions();">List actions</button>
+		<button onclick="javascript:AcquireSample();">Acquire sample</button>
+		<button onclick="javascript:TransferImage();">Transfer image</button>
+	</div>
+	<div>
+		<button onclick="javascript:InitTwain();">Init twain</button>
+		<button onclick="javascript:ListSources();">List sources</button>
+		<button onclick="javascript:SelectSource();">Select source</button>
+		<button onclick="javascript:AcquireImage();">Acquire image</button>
+	</div>
+	<div>JSON Reply</div>
+	<div><textarea id="reply" rows="15" cols="120"></textarea></div>
+	<div>Image</div>
+	<div><img id="image"></div>
+</body>
+
+</html>
