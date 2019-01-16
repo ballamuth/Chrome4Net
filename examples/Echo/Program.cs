@@ -29,10 +29,10 @@ namespace Echo
             if (args.Length == 0) Usage();
 
             // started by chrome?
-            else if (args[args.Length - 1].StartsWith("chrome-extension://")) RunNativeMessagingHost(args);
+            else if (args.Any(arg => arg.StartsWith("chrome-extension://"))) RunNativeMessagingHost(args);
 
             // register command?
-            else if (args[args.Length - 1] == "register") RegisterNativeMessagingHost(args);
+            else if (args.Contains("register")) RegisterNativeMessagingHost(args);
 
             // invalid command line
             else InvalidCommand(args[args.Length - 1]);
