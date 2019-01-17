@@ -30,13 +30,13 @@ namespace RelayedEcho
             if (args.Length == 0) Usage();
 
             // started by chrome?
-            else if (args[args.Length - 1].StartsWith("chrome-extension://")) RunRelay(args);
+            else if (args.Any(arg => arg.StartsWith("chrome-extension://"))) RunRelay(args);
 
             // started by relay?
-            else if (args[args.Length - 1] == "process") RunProcessor(args);
+            else if (args.Contains("process")) RunProcessor(args);
 
             // register command?
-            else if (args[args.Length - 1] == "register") RegisterNativeMessagingHost(args);
+            else if (args.Contains("register")) RegisterNativeMessagingHost(args);
 
             // invalid command line
             else InvalidCommand(args[args.Length - 1]);
